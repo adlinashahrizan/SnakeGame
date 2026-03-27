@@ -58,8 +58,9 @@ namespace SnakeGameProject
         private void BtnStats_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "Controls: Arrow Keys\n" +
-                "Challenges: Obstacles + Increasing Speed\n" +
+                "Controls: Arrow keys (Up/Down/Left/Right)\n" +
+                "Objective: Eat food to grow and earn points\n" +
+                "Challenges: Obstacles and increasing speed\n" +
                 "Items: Normal Food (+1), Bonus Food (+3)\n" +
                 "Levels: 3",
                 "Game Info"
