@@ -11,9 +11,9 @@ namespace SnakeGameProject
         {
             Levels = new List<Level>
             {
-                new Level(1, "Level 1", 250, 10, 2),
-                new Level(2, "Level 2", 150, 30, 4),
-                new Level(3, "Level 3", 100, 50, 6)
+                new Level(1, "Level 1", 250, 5, 2),
+                new Level(2, "Level 2", 150, 10, 4),
+                new Level(3, "Level 3", 100, 15, 6)
             };
 
             CurrentLevel = Levels[0];
