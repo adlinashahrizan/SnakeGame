@@ -17,7 +17,7 @@ namespace SnakeGameProject
             Text = "Snake Game";
             DoubleBuffered = true;
             StartPosition = FormStartPosition.CenterScreen;
-            ClientSize = new Size(520, 600);
+            ClientSize = new Size(580, 600);
             KeyPreview = true;
 
             timer = new System.Windows.Forms.Timer();
@@ -68,54 +68,74 @@ namespace SnakeGameProject
         {
             base.OnPaint(e);
             Graphics g = e.Graphics;
+            // Calculate board pixel size and center offsets
+            int boardPixelWidth = controller.Board.Width * cellSize;
+            int boardPixelHeight = controller.Board.Height * cellSize;
 
+            int offsetX = (ClientSize.Width - boardPixelWidth) / 2;
+            int offsetY = (ClientSize.Height - boardPixelHeight) / 2;
+            // Move the board slightly up so there's more space below for status text
+            int verticalShift = 30; // pixels to shift up
+            offsetY = Math.Max(10, offsetY - verticalShift);
+
+            // Draw board border
+            g.DrawRectangle(Pens.Black, offsetX, offsetY, boardPixelWidth, boardPixelHeight);
+
+            // Draw snake
             foreach (Position pos in controller.Snake.Body)
             {
-                g.FillRectangle(Brushes.Green, pos.X * cellSize, pos.Y * cellSize, cellSize, cellSize);
-                g.DrawRectangle(Pens.Black, pos.X * cellSize, pos.Y * cellSize, cellSize, cellSize);
+                int x = offsetX + pos.X * cellSize;
+                int y = offsetY + pos.Y * cellSize;
+                g.FillRectangle(Brushes.Green, x, y, cellSize, cellSize);
+                g.DrawRectangle(Pens.Black, x, y, cellSize, cellSize);
             }
 
+            // Draw current item
             if (controller.CurrentItem != null)
             {
                 Brush itemBrush = Brushes.Red;
-
                 if (controller.CurrentItem is BonusFood)
                     itemBrush = Brushes.Gold;
 
-                g.FillEllipse(itemBrush,
-                    controller.CurrentItem.Position.X * cellSize,
-                    controller.CurrentItem.Position.Y * cellSize,
-                    cellSize,
-                    cellSize);
+                int ix = offsetX + controller.CurrentItem.Position.X * cellSize;
+                int iy = offsetY + controller.CurrentItem.Position.Y * cellSize;
+                g.FillEllipse(itemBrush, ix, iy, cellSize, cellSize);
             }
 
+            // Draw obstacles
             foreach (Obstacle obstacle in controller.Obstacles)
             {
-                g.FillRectangle(Brushes.Gray,
-                    obstacle.Position.X * cellSize,
-                    obstacle.Position.Y * cellSize,
-                    cellSize,
-                    cellSize);
+                int ox = offsetX + obstacle.Position.X * cellSize;
+                int oy = offsetY + obstacle.Position.Y * cellSize;
+                g.FillRectangle(Brushes.Gray, ox, oy, cellSize, cellSize);
             }
 
-            g.DrawString(
-                "Player: " + controller.Player.Name +
-                "   Score: " + controller.ScoreManager.CurrentScore +
-                "   High Score: " + controller.ScoreManager.HighScore +
-                "   Level: " + controller.LevelManager.CurrentLevel.LevelNumber,
-                new Font("Arial", 12),
-                Brushes.Black,
-                10,
-                520
-            );
+            // Draw status text below the board
+            int textX = offsetX;
+            int textY = offsetY + boardPixelHeight + 10;
 
-            g.DrawString(
-                "Normal Food = +1   Bonus Food = +3   Obstacles = Challenge",
-                new Font("Arial", 10),
-                Brushes.Black,
-                10,
-                550
-            );
+            using (var font12 = new Font("Arial", 12))
+            using (var font10 = new Font("Arial", 10))
+            {
+                g.DrawString(
+                    "Player: " + controller.Player.Name +
+                    "   Score: " + controller.ScoreManager.CurrentScore +
+                    "   High Score: " + controller.ScoreManager.HighScore +
+                    "   Level: " + controller.LevelManager.CurrentLevel.LevelNumber,
+                    font12,
+                    Brushes.Black,
+                    textX,
+                    textY
+                );
+
+                g.DrawString(
+                    "Normal Food = +1   Bonus Food = +3   Obstacles = Challenge",
+                    font10,
+                    Brushes.Black,
+                    textX,
+                    textY + 30
+                );
+            }
         }
     }
 }
