@@ -65,7 +65,7 @@ namespace SnakeGameProject
                 "Level 3 = 15\n" +
                 "Challenges: Obstacles and increasing speed\n" +
                 "Items: Normal Food(red) (+1), Bonus Food(yellow) (+3)\n" 
-                "Levels: 3",
+                "Levels: 3\n",
                 "Game Info"
             );
         }
