@@ -61,7 +61,7 @@ namespace SnakeGameProject
                 "Controls: Arrow keys (Up/Down/Left/Right)\n" +
                 "Objective: Eat food to grow and earn points\n" +
                 "Challenges: Obstacles and increasing speed\n" +
-                "Items: Normal Food (+1), Bonus Food (+3)\n" +
+                "Items: Normal Food(red) (+1), Bonus Food(yellow) (+3)\n" 
                 "Levels: 3",
                 "Game Info"
             );
