@@ -22,6 +22,7 @@ namespace SnakeGameProject
             random = new Random();
             Player = new Player("Player 1");
             Snake = new Snake();
+            // Default board size
             Board = new GameBoard(20, 20);
             LevelManager = new LevelManager();
             ScoreManager = new ScoreManager();
