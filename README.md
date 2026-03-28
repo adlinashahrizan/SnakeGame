@@ -1,5 +1,5 @@
 a) Project Title
-  SnakeGame Assignment
+  - SnakeGame Assignment
 
 b) Group Members
 
