@@ -4,69 +4,69 @@ a) Project Title
 b) Group Members
 
 c) Project Description
-  This project is a C# Windows Forms Snake Game developed using Object-Oriented Programming
+  - This project is a C# Windows Forms Snake Game developed using Object-Oriented Programming
   (OOP) concepts. The player controls a snake that moves inside a bordered area, collects food, and avoids obstacles and collisions.
-  The game has three levels with increasing difficulty. As the player moves to higher levels, the snake become faster and more obstacles appear, making the game more    
-  challenging. The objective is to reach the target score for each level and complete all levels without hitting with the wall, obstacles, or the snake's own body.
-  This project demonstrate the use of OOP concepts such as encapsulation, inheritance, polymorphism,   and abstraction. It also provides a simple interactive and menu-driven   interface for the user.
+  The game has three levels with increasing difficulty. As the player moves to higher levels, the snake become faster and more obstacles appear, making the game
+  more challenging. The objective is to reach the target score for each level and complete all levels without hitting with the wall, obstacles, or the snake's own    body.This project demonstrate the use of OOP concepts such as encapsulation, inheritance, polymorphism,   and abstraction. It also provides a simple interactive
+  and menu-driven interface for the user.
 
 d) System Features
-  Menu Sytem
+  - Menu Sytem
   -> Start Game
   -> View Game Info
   -> Exit Application
 
-  Snake Movement
+  - Snake Movement
   -> Controlled using arrow keys
   -> Snake grows when food is collected
 
-  Multiple Food Types
+  - Multiple Food Types
   -> Normal food (+1 score)
   -> Bonus food (+3 score)
 
-  Obstacle System (Challenge)
+  - Obstacle System (Challenge)
   -> Obstacles increase with each level
   -> Collision with obstacle results in game over
 
-  Score Management
+  - Score Management
   -> Tracks current score and high score
 
-  Level System (Level 1,2,3)
+  - Level System (Level 1,2,3)
   -> Level 1 : Slow speed, fewer obstacles (Target : 5)
   -> Level 2 : Medium speed, more obstacles (Target : 10)
   -> Level 3 : Fast spped, highest difficulty (Target : 15)
 
-  Increasing Difficulty
+  - Increasing Difficulty
   -> Snake speed increases each level
 
-  Game Boundary (Black Border)
+  - Game Boundary (Black Border)
   -> Clearly visible game area
   -> Collision with border results in game over
 
-  Game Over & Win Condition
+  - Game Over & Win Condition
   -> Game ends if snake hits wall, obstacles or itself
 
 e) OOP Concepts Used
-  Encapsulation
+  - Encapsulation
   -> Private fields with public properties in classes
 
-  Inheritance
+  - Inheritance
   -> Item (base class) - NormalFood, BonusFood
 
-  Polymorphism
+  - Polymorphism
   -> Different behaviour using overriden methods like GetPoints()
 
-  Abstraction
+  - Abstraction
   -> Abstarct class Item
   -> Interface ICollectable
 
-  Collections
+  - Collections
   -> Lists used for snake body, obstacles and levels
 
-  Exception Handling
+  - Exception Handling
   -> Try-catch used to handle runtime errors during hame execution
 
-  Separation of Concerns
+  - Separation of Concerns
   -> GameController handles game logic
   -> GameForm handles UI
   -> LevelManager handles level progression
