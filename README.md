@@ -2,6 +2,13 @@ a) Project Title
   - SnakeGame Assignment
 
 b) Group Members
+1. Sarah Amni Binti Manan- 25014216
+2. ⁠Nur Aqilah Binti Roslan - 25014140
+3. ⁠Puteri Alya Qistina Binti Mohamad Faizal -25014060
+4. ⁠Adlina Binti Shahrizan Adzham - 25014209
+5. ⁠Jasmin Damia Binti Norazmi - 25014130
+6. ⁠Wan Nur Ainnadhirah binti Wan Mohd Azmi - 25014235
+7. Nur Iman Farzana Binti Zamzeley - 25014260
 
 c) Project Description
   - This project is a C# Windows Forms Snake Game developed using Object-Oriented Programming
