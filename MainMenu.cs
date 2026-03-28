@@ -1,74 +1,67 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
-namespace SnakeGameProject
+namespace Snake_Game_Jan26
 {
-    public class MainMenu : Form
+    public partial class MainMenu : Form
     {
-        private Button btnStart;
-        private Button btnStats;
-        private Button btnExit;
-        private Label lblTitle;
-
         public MainMenu()
         {
-            Text = "Snake Game Menu";
-            Size = new Size(400, 300);
-            StartPosition = FormStartPosition.CenterScreen;
-
-            lblTitle = new Label();
-            lblTitle.Text = "Snake Game";
-            lblTitle.Font = new Font("Arial", 20, FontStyle.Bold);
-            lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(120, 30);
-
-            btnStart = new Button();
-            btnStart.Text = "Start Game";
-            btnStart.Size = new Size(120, 40);
-            btnStart.Location = new Point(130, 90);
-            btnStart.Click += BtnStart_Click;
-
-            btnStats = new Button();
-            btnStats.Text = "View Info";
-            btnStats.Size = new Size(120, 40);
-            btnStats.Location = new Point(130, 140);
-            btnStats.Click += BtnStats_Click;
-
-            btnExit = new Button();
-            btnExit.Text = "Exit";
-            btnExit.Size = new Size(120, 40);
-            btnExit.Location = new Point(130, 190);
-            btnExit.Click += BtnExit_Click;
-
-            Controls.Add(lblTitle);
-            Controls.Add(btnStart);
-            Controls.Add(btnStats);
-            Controls.Add(btnExit);
+            InitializeComponent();
         }
 
-        private void BtnStart_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            GameForm gameForm = new GameForm();
-            gameForm.FormClosed += (s, args) => this.Show();
-            gameForm.Show();
+            Form1 game = new Form1();
+            game.Show();
             this.Hide();
         }
 
-        private void BtnStats_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Controls: Arrow Keys\n" +
-                "Challenges: Obstacles + Increasing Speed\n" +
-                "Items: Normal Food (+1), Bonus Food (+3)\n" +
-                "Levels: 3",
-                "Game Info"
-            );
-        }
+            // Show a simple rules window and return to the main menu when closed
+            this.Hide();
 
-        private void BtnExit_Click(object sender, EventArgs e)
+            Form rulesForm = new Form();
+            rulesForm.Text = "Rules";
+            rulesForm.ClientSize = new Size(420, 260);
+            rulesForm.StartPosition = FormStartPosition.CenterParent;
+
+            Label rulesLabel = new Label();
+            rulesLabel.Text =
+                "\t-----Snake Game Rules!-----\n\t\t 1. Use arrow keys to move the snake.\n" +
+                "\t\t 2. Eat the food to grow longer.\n" +
+                "\t\t 3. Avoid hitting the walls or yourself.\n" +
+                "\t\t 4. Special yellow fruit gives extra points :3";
+            rulesLabel.AutoSize = false;
+            rulesLabel.Size = new Size(380, 160);
+            rulesLabel.Location = new Point(10, 10);
+            rulesLabel.TextAlign = ContentAlignment.TopLeft;
+
+            Button back = new Button();
+            back.Text = "Back";
+            back.Size = new Size(80, 30);
+            back.Location = new Point((rulesForm.ClientSize.Width - back.Width) / 2, rulesLabel.Bottom + 10);
+            back.Click += (s, ev) => rulesForm.Close();
+
+            rulesForm.Controls.Add(rulesLabel);
+            rulesForm.Controls.Add(back);
+
+            // set the rules page background to the requested RGB color and ensure text is readable
+            rulesForm.BackColor = Color.FromArgb(155, 188, 15);
+            rulesLabel.ForeColor = Color.Black;
+
+            rulesForm.ShowDialog(this);
+            this.Show();
+        }
+        private void button3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }
