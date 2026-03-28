@@ -12,63 +12,63 @@ c) Project Description
 
 d) System Features
   - Menu Sytem
-  -> Start Game
-  -> View Game Info
-  -> Exit Application
+  - -> Start Game
+  - -> View Game Info
+  - -> Exit Application
 
   - Snake Movement
-  -> Controlled using arrow keys
-  -> Snake grows when food is collected
+  - -> Controlled using arrow keys
+  - -> Snake grows when food is collected
 
   - Multiple Food Types
-  -> Normal food (+1 score)
-  -> Bonus food (+3 score)
+  - -> Normal food (+1 score)
+  - -> Bonus food (+3 score)
 
   - Obstacle System (Challenge)
-  -> Obstacles increase with each level
-  -> Collision with obstacle results in game over
+  - -> Obstacles increase with each level
+  - -> Collision with obstacle results in game over
 
   - Score Management
-  -> Tracks current score and high score
+  - -> Tracks current score and high score
 
   - Level System (Level 1,2,3)
-  -> Level 1 : Slow speed, fewer obstacles (Target : 5)
-  -> Level 2 : Medium speed, more obstacles (Target : 10)
-  -> Level 3 : Fast spped, highest difficulty (Target : 15)
+  - -> Level 1 : Slow speed, fewer obstacles (Target : 5)
+  - -> Level 2 : Medium speed, more obstacles (Target : 10)
+  - -> Level 3 : Fast spped, highest difficulty (Target : 15)
 
   - Increasing Difficulty
-  -> Snake speed increases each level
+  - -> Snake speed increases each level
 
   - Game Boundary (Black Border)
-  -> Clearly visible game area
-  -> Collision with border results in game over
+  - -> Clearly visible game area
+  - -> Collision with border results in game over
 
   - Game Over & Win Condition
-  -> Game ends if snake hits wall, obstacles or itself
+  - -> Game ends if snake hits wall, obstacles or itself
 
 e) OOP Concepts Used
   - Encapsulation
-  -> Private fields with public properties in classes
+  - -> Private fields with public properties in classes
 
   - Inheritance
-  -> Item (base class) - NormalFood, BonusFood
+  - -> Item (base class) - NormalFood, BonusFood
 
   - Polymorphism
-  -> Different behaviour using overriden methods like GetPoints()
+  - -> Different behaviour using overriden methods like GetPoints()
 
   - Abstraction
-  -> Abstarct class Item
-  -> Interface ICollectable
+  - -> Abstarct class Item
+  - -> Interface ICollectable
 
   - Collections
-  -> Lists used for snake body, obstacles and levels
+  - -> Lists used for snake body, obstacles and levels
 
   - Exception Handling
-  -> Try-catch used to handle runtime errors during hame execution
+  - -> Try-catch used to handle runtime errors during hame execution
 
   - Separation of Concerns
-  -> GameController handles game logic
-  -> GameForm handles UI
-  -> LevelManager handles level progression
-  -> ScoreManager handles scoring
+  - -> GameController handles game logic
+  - -> GameForm handles UI
+  - -> LevelManager handles level progression
+  - -> ScoreManager handles scoring
   
