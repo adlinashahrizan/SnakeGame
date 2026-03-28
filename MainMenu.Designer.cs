@@ -1,4 +1,4 @@
-namespace Snake_Game_Jan26
+namespace SnakeGameProject
 {
     partial class MainMenu
     {
@@ -28,7 +28,6 @@ namespace Snake_Game_Jan26
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -81,37 +80,37 @@ namespace Snake_Game_Jan26
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(-460, -29);
+            pictureBox2.Image = Snake_Game.Properties.Resources.Gemini_Generated_Image_vr6yyovr6yyovr6y;
+            pictureBox2.Location = new Point(-63, -138);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1262, 705);
-            pictureBox2.TabIndex = 5;
+            pictureBox2.Size = new Size(458, 608);
+            pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(238, 67);
+            pictureBox1.Image = Snake_Game.Properties.Resources.Gemini_Generated_Image_fy3hxyfy3hxyfy3h;
+            pictureBox1.Location = new Point(-513, -43);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(319, 181);
-            pictureBox1.TabIndex = 4;
+            pictureBox1.Size = new Size(1422, 788);
+            pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.f632a812eb1afc3;
-            pictureBox3.Location = new Point(238, 285);
+            pictureBox3.Image = Snake_Game.Properties.Resources.f632a812eb1afc3;
+            pictureBox3.Location = new Point(217, 278);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(319, 117);
+            pictureBox3.Size = new Size(349, 123);
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            pictureBox4.Image = Properties.Resources.Gemini_Generated_Image_vr6yyovr6yyovr6y;
-            pictureBox4.Location = new Point(-69, -135);
+            pictureBox4.Image = Snake_Game.Properties.Resources.snake1;
+            pictureBox4.Location = new Point(246, 39);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(461, 607);
+            pictureBox4.Size = new Size(320, 173);
             pictureBox4.TabIndex = 7;
             pictureBox4.TabStop = false;
             // 
@@ -120,13 +119,13 @@ namespace Snake_Game_Jan26
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox4);
             Controls.Add(button1);
             Controls.Add(pictureBox3);
             Controls.Add(button3);
-            Controls.Add(pictureBox1);
-            Controls.Add(pictureBox4);
-            Controls.Add(button2);
             Controls.Add(pictureBox2);
+            Controls.Add(button2);
+            Controls.Add(pictureBox1);
             Name = "MainMenu";
             Text = "MainMenu";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

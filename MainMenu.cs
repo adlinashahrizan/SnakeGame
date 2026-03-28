@@ -5,8 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
-namespace Snake_Game_Jan26
+namespace SnakeGameProject
 {
     public partial class MainMenu : Form
     {
@@ -17,7 +16,7 @@ namespace Snake_Game_Jan26
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 game = new Form1();
+            GameForm game = new GameForm();
             game.Show();
             this.Hide();
         }
