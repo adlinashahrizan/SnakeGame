@@ -6,7 +6,7 @@
 
         public override int GetPoints()
         {
-            return 3;
+            return 3;  //worth 3 points
         }
     }
 }
