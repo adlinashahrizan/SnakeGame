@@ -19,6 +19,8 @@ namespace SnakeGameProject
             StartPosition = FormStartPosition.CenterScreen;
             ClientSize = new Size(580, 600);
             KeyPreview = true;
+            // Set form background color to green (outside area) using RGB
+            BackColor = Color.FromArgb(193, 225, 193); // RGB for green
 
             timer = new System.Windows.Forms.Timer();
             timer.Interval = controller.LevelManager.CurrentLevel.Speed;
@@ -91,6 +93,13 @@ namespace SnakeGameProject
             offsetY = Math.Max(10, offsetY - verticalShift);
 
             // Draw board border
+            // Fill board background (inner board area) with light green using RGB
+            using (var boardBg = new SolidBrush(Color.FromArgb(236, 255, 220))) // RGB for light green
+            {
+                g.FillRectangle(boardBg, offsetX, offsetY, boardPixelWidth, boardPixelHeight);
+            }
+
+            // Draw board border
             g.DrawRectangle(Pens.Black, offsetX, offsetY, boardPixelWidth, boardPixelHeight);
 
             // Draw snake
@@ -98,7 +107,8 @@ namespace SnakeGameProject
             {
                 int x = offsetX + pos.X * cellSize;
                 int y = offsetY + pos.Y * cellSize;
-                g.FillRectangle(Brushes.Green, x, y, cellSize, cellSize);
+                // Use a darker green so the snake remains visible on the green board
+                g.FillRectangle(Brushes.DarkGreen, x, y, cellSize, cellSize);
                 g.DrawRectangle(Pens.Black, x, y, cellSize, cellSize);
             }
 
