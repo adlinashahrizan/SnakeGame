@@ -20,7 +20,6 @@ namespace SnakeGameProject
         public GameController()
         {
             random = new Random();
-            Player = new Player("Player 1");
             Snake = new Snake();
             // Default board size
             Board = new GameBoard(20, 20);
@@ -70,10 +69,22 @@ namespace SnakeGameProject
                 int nextX = head.X;
                 int nextY = head.Y;
 
-                if (Snake.Direction == "UP") nextY--;
-                else if (Snake.Direction == "DOWN") nextY++;
-                else if (Snake.Direction == "LEFT") nextX--;
-                else if (Snake.Direction == "RIGHT") nextX++;
+                if (Snake.Direction == "UP")
+                {
+                    nextY--;
+                }
+                else if (Snake.Direction == "DOWN")
+                {
+                    nextY++;
+                }
+                else if (Snake.Direction == "LEFT")
+                {
+                    nextX--;
+                }
+                else if (Snake.Direction == "RIGHT")
+                {
+                    nextX++;
+                }
 
                 Position nextHead = new Position(nextX, nextY);
                 bool willGrow = CurrentItem != null && nextHead.Equals(CurrentItem.Position);
