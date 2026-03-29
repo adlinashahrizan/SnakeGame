@@ -159,8 +159,7 @@ namespace SnakeGameProject
             using (var font10 = new Font("Arial", 10))
             {
                 g.DrawString(
-                    "Player: " + controller.Player.Name +
-                    "   Score: " + controller.ScoreManager.CurrentScore +
+                    "Score: " + controller.ScoreManager.CurrentScore +
                     "   High Score: " + controller.ScoreManager.HighScore +
                     "   Level: " + controller.LevelManager.CurrentLevel.LevelNumber,
                     font12,
