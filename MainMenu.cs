@@ -16,11 +16,10 @@ namespace SnakeGameProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Beginner-friendly approach: hide the menu, open the game as a modal dialog,
-            // then show the menu again when the game window is closed.
+            
             GameForm game = new GameForm();
             this.Hide();
-            // ShowDialog blocks here until the game form is closed, so no event handler is needed.
+            
             game.ShowDialog();
             this.Show();
         }
@@ -30,7 +29,7 @@ namespace SnakeGameProject
         //
         private void button2_Click(object sender, EventArgs e)
         {
-            // Show a simple rules window and return to the main menu when closed
+            //simple rules window and return to the main menu when closed
             this.Hide();
 
             Form rulesForm = new Form();
@@ -43,7 +42,8 @@ namespace SnakeGameProject
                 "\t-----Snake Game Rules!-----\n\t\t 1. Use arrow keys to move the snake.\n" +
                 "\t\t 2. Eat the food to grow longer.\n" +
                 "\t\t 3. Avoid hitting the walls or yourself.\n" +
-                "\t\t 4. Special yellow fruit gives extra points :3";
+                "\t\t 4. Hitting obstacles will end the game.\n" +
+                "\t\t 5. Special yellow fruit gives extra points :3";
             rulesLabel.AutoSize = false;
             rulesLabel.Size = new Size(380, 160);
             rulesLabel.Location = new Point(10, 10);
@@ -58,7 +58,7 @@ namespace SnakeGameProject
             rulesForm.Controls.Add(rulesLabel);
             rulesForm.Controls.Add(back);
 
-            // set the rules page background to the requested RGB color and ensure text is readable
+            
             rulesForm.BackColor = Color.FromArgb(155, 188, 15);
             rulesLabel.ForeColor = Color.Black;
 
