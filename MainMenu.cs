@@ -16,11 +16,18 @@ namespace SnakeGameProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Beginner-friendly approach: hide the menu, open the game as a modal dialog,
+            // then show the menu again when the game window is closed.
             GameForm game = new GameForm();
-            game.Show();
             this.Hide();
+            // ShowDialog blocks here until the game form is closed, so no event handler is needed.
+            game.ShowDialog();
+            this.Show();
         }
 
+        //
+        //rules
+        //
         private void button2_Click(object sender, EventArgs e)
         {
             // Show a simple rules window and return to the main menu when closed

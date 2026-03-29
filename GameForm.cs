@@ -37,6 +37,8 @@ namespace SnakeGameProject
             {
                 timer.Stop();
                 MessageBox.Show("Game Over!");
+                // Close the game form after showing the message; the caller (main menu)
+                // will continue execution after ShowDialog() returns.
                 Close();
                 return;
             }
