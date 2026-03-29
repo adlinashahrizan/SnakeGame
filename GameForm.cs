@@ -153,7 +153,7 @@ namespace SnakeGameProject
                 );
 
                 g.DrawString(
-                    "Normal Food = +1   Bonus Food = +3   Obstacles = Challenge",
+                    "Normal Food = +1   Bonus Food = +3   Obstacles = Rocks",
                     font10,
                     Brushes.Black,
                     textX,
