@@ -24,9 +24,7 @@ namespace SnakeGameProject
             this.Show();
         }
 
-        //
         //rules
-        //
         private void button2_Click(object sender, EventArgs e)
         {
             //simple rules window and return to the main menu when closed
