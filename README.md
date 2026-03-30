@@ -27,7 +27,7 @@ d) System Features
   - -> Controlled using arrow keys
   - -> Snake grows when food is collected
 
-  - Multiple Food Types\n
+  - Multiple Food Types
   - -> Normal food (+1 score)
   - -> Bonus food (+3 score)
 
