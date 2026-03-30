@@ -24,34 +24,34 @@ d) System Features
       - Exit Application
 
    2. Snake Movement
-     - Controlled using arrow keys
-     - Snake grows when food is collected
+      - Controlled using arrow keys
+      - Snake grows when food is collected
 
    3. Multiple Food Types
-     - Normal food (+1 score)
-     - Bonus food (+3 score)
+      - Normal food (+1 score)
+      - Bonus food (+3 score)
 
    4. Obstacle System (Challenge)
-     - Obstacles increase with each level
-     - Collision with obstacle results in game over
+      - Obstacles increase with each level
+      - Collision with obstacle results in game over
 
   5. Score Management
-    - Tracks current score and high score
+     - Tracks current score and high score
 
   6. Level System (Level 1,2,3)
-    - Level 1 : Slow speed, fewer obstacles (Target : 5)
-    - Level 2 : Medium speed, more obstacles (Target : 10)
-    - Level 3 : Fast spped, highest difficulty (Target : 15)
+     - Level 1 : Slow speed, fewer obstacles (Target : 5)
+     - Level 2 : Medium speed, more obstacles (Target : 10)
+     - Level 3 : Fast spped, highest difficulty (Target : 15)
 
   7. Increasing Difficulty
-    - Snake speed increases each level
+     - Snake speed increases each level
 
   8. Game Boundary (Black Border)
-    - Clearly visible game area
-    - Collision with border results in game over
+     - Clearly visible game area
+     - Collision with border results in game over
 
   9. Game Over & Win Condition
-    - Game ends if snake hits wall, obstacles or itself
+     - Game ends if snake hits wall, obstacles or itself
 
 e) OOP Concepts Used
    1. Encapsulation 
