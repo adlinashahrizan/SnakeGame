@@ -78,4 +78,10 @@ e) OOP Concepts Used
   - -> GameForm handles UI
   - -> LevelManager handles level progression
   - -> ScoreManager handles scoring
-  
+
+f) How to run the program
+   1. Open the solution in Visual Studio Community
+   2. Build the project
+   3. Run using Start Debugging (F5)
+
+
