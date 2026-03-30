@@ -58,7 +58,7 @@ e) OOP Concepts Used
   - -> Private fields with public properties in classes
 
   - Inheritance
-  - -> Item (base class) - NormalFood, BonusFood
+  - ->   Item (base class) - NormalFood, BonusFood
 
   - Polymorphism
   - -> Different behaviour using overriden methods like GetPoints()
