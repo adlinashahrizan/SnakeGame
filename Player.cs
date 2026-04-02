@@ -6,7 +6,7 @@ namespace SnakeGameProject
 
         public Player()
         {
-            Health = 3;
+            Health = 1;
         }
     }
 }
